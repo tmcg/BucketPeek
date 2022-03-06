@@ -27,3 +27,10 @@
 - Add the app name to INSTALLED_APPS in bucket_peek/settings.py
 - Add the view in bucket_list/views.py
 - Create a new template file - templates/bucket_list/index.html
+
+
+### Retrieve an actual list of buckets from S3
+
+- Edit bucket_list/views.py to get buckets and attributes with boto3
+- Edit the urls config file bucket_list/urls.py for the buckets/ path
+- Create a new template file - templates/bucket_list/bucket.html
