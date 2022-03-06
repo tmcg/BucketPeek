@@ -4,11 +4,15 @@ from django.http import HttpResponse
 from django.template import loader
 
 import boto3
-from botocore.exceptions import ClientError
+from botocore.exceptions import ClientError, NoCredentialsError
 
 def index(request):
-    s3 = boto3.resource('s3')
-    bucket_names = [b.name for b in s3.buckets.all()]
+    bucket_names = []
+    try:
+        s3 = boto3.resource('s3')
+        bucket_names = [b.name for b in s3.buckets.all()]
+    except NoCredentialsError:
+        pass
 
     template = loader.get_template("bucket_list/index.html")
     context = {
