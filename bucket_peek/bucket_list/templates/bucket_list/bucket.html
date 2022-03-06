@@ -1,6 +1,7 @@
 
-<html>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
 <h1>Bucket {{ bucket_name }}</h1>
 
 <ul>
@@ -9,5 +10,4 @@
 </ul>
 <p>
 <a href="/">Back</a>
-</body>
-</html>
+{% endblock content %}
