@@ -1,0 +1,9 @@
+
+<html>
+<body>
+<h1>My S3 Buckets</h1>
+{% for bucket_name in bucket_names %}
+   <a href="/bucket/{{ bucket_name}}">{{ bucket_name }}</a><br>
+{% endfor %}
+</body>
+</html>
