@@ -58,7 +58,7 @@ docker push tmcgz/bucket_peek:latest
     * use 'ecsTaskExecutionRole' for the task execution role (to retrieve container images)
 - When adding the container:
     * Container name = 'BucketPeekContainer' 
-    * Image = docker.io/tmcgz/containerofcats
+    * Image = docker.io/tmcgz/bucket_peek
     * Command (comma-separated) = python,bucket_peek/manage.py,runserver,0.0.0.0:80
 - Run a new task based off the ECS task definition
     * Type = FARGATE
